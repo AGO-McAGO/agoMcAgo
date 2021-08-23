@@ -1,11 +1,123 @@
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-US" style="height: 100%;">
   <head>
-    <meta charset="utf-8">
-    <title> AGO McAGO </title>
-  </head>
+    <meta charset="UTF-8" />
+
+    <title> agobanks official bootstrap popovers VAULT </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="agobanks, examination timetables, blah, blah, blah" />
+    <meta name="description" content="agobanks website for informations on blah blah"/>
+    <meta name="author" content="AGO McAGO" /> <!-- End of meta tags -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="csss/all.min.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <style>
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!-- jQuery cdn -->
+  </head> <!-- End of head tag -->
   <body>
+
+<div class="container mt-5">
+<!-- POPOVERS -->
+<h1> Popovers </h1>
+
+<button class="btn btn-outline-primary" data-toggle="popover" data-placement="top" data-content="Blah blah aaaaaaaaaaaaakkk"> Top </button>
+<button class="btn btn-outline-dark" data-toggle="popover" data-placement="right" data-content="Blah blah aaaaaaaaaaaaakkk"> Right </button>
+<button class="btn btn-outline-success" data-toggle="popover" data-placement="bottom" data-content="Blah blah aaaaaaaaaaaaakkk"> Bottom </button>
+<button class="btn btn-outline-warning" data-toggle="popover" data-placement="left" data-content="Blah blah aaaaaaaaaaaaakkk"> Left </button>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<!-- POPOVERS DISMISSIBLE -->
+<h1> Popovers Dismissible </h1>
+
+<button class="btn btn-outline-dark" data-toggle="popover" data-placement="right" data-content="Blah blah aaaaaaaaaaaaakkk" data-trigger="focus">
+	Blah blah
+</button>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<!-- POPOVER TRIGGER WITH JS-->
+<h2> Popover Trigger With Js </h2>
+
+<button id="ago" class="btn btn-outline-dark" data-toggle="popover" data-placement="right" data-content="Blah blah aaaaaaaaaaaaakkk" data-trigger="focus">
+	Blah blah
+</button>
+
+<hr />
+
+<button class="btn btn-outline-primary" onclick="showPopover()"> Show </button>
+<button class="btn btn-outline-dark" onclick="hidePopover()"> Hide </button>
+<button class="btn btn-outline-success" onclick="togglePopover()"> Toggle </button>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</div> <!-- container div end -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script src="jss/all.min.js"></script> <!-- fontAwesome js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Popover Trigger Script -->
+    <script>
+
+/* For simple popover */
+    $('[data-toggle="popover"]').popover( );
+
+/* For popover Js trigger */
+function showPopover() {
+    $("#ago").popover("show");
+}
+
+function hidePopover() {
+    $("#ago").popover("hide");
+}
+
+function togglePopover() {
+    $("#ago").popover("toggle");
+}
+
+/* For popover events */
+    $("#ago").on("show.bs.popover", function() {
+    	console.log("Popover Shown.");
+    });
+
+    </script>
 
   </body>
 </html>
